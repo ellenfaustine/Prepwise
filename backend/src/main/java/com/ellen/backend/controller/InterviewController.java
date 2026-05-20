@@ -13,11 +13,11 @@ import com.ellen.backend.model.InterviewQuestion;
 import com.ellen.backend.service.InterviewService;
 
 @RestController
-public class HelloController {
+public class InterviewController {
 
     private final InterviewService interviewService;
 
-    public HelloController(InterviewService interviewService) {
+    public InterviewController(InterviewService interviewService) {
         this.interviewService = interviewService;
     }
 
