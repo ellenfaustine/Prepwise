@@ -19,4 +19,25 @@ public class InterviewService {
     public List<InterviewQuestion> getQuestions() {
         return repository.findAll();
     }
+
+    public InterviewQuestion saveQuestion(InterviewQuestion question){
+        return repository.save(question);
+    }
+
+    public InterviewQuestion updateQuestion(
+            Long id,
+            InterviewQuestion updatedQuestion) {
+
+        InterviewQuestion question =
+                repository.findById(id).orElseThrow();
+
+        question.setQuestion(updatedQuestion.getQuestion());
+        question.setCategory(updatedQuestion.getCategory());
+
+        return repository.save(question);
+    }
+
+    public void deleteQuestion(Long id) {
+        repository.deleteById(id);
+    }
 }

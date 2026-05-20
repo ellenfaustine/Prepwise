@@ -34,4 +34,12 @@ public class InterviewQuestion {
     public String getCategory() {
         return category;
     }
+
+    public void setQuestion(String question) {
+        this.question = question;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
 }
